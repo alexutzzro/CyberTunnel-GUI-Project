@@ -1,23 +1,25 @@
-# CyberTunnel - Cybersecurity Escape Tunnel
+# CyberTunnel — Cybersecurity Escape Room
 
-A first-person puzzle game built in Unity (URP) where players navigate through 5 rooms in an underground cyber tunnel, each containing a cybersecurity challenge. Solve all 5 to escape.
+Joc first-person puzzle educațional construit în Unity (URP). Jucătorul este blocat într-un tunel subteran de securitate cibernetică și trebuie să rezolve 5 puzzle-uri de criptografie și securitate pentru a scăpa.
 
-## Game Concept
+## Concept
 
-**Genre:** First-Person Puzzle / Educational  
-**Engine:** Unity 2022+ (Universal Render Pipeline)  
-**Players:** Single player  
-**Theme:** Cybersecurity / Hacking / Digital forensics
+**Gen:** First-Person Puzzle / Educațional  
+**Motor:** Unity 2022.3 LTS (Universal Render Pipeline)  
+**Jucători:** Single player  
+**Temă:** Securitate cibernetică, criptografie, rețele
 
-### Story
+### Poveste
 
-You are a cybersecurity trainee trapped in a simulated underground facility. To prove your skills and earn your certification, you must navigate through 5 secured rooms. Each room contains a cybersecurity challenge that tests a different skill — from classical cryptography to modern network security.
+Ești un trainee în securitate cibernetică blocat într-o facilitate simulată subterană. Pentru a-ți dovedi abilitățile și a obține certificarea, trebuie să treci prin 5 camere securizate. Fiecare cameră testează o abilitate diferită — de la criptografie clasică la noțiuni moderne de securitate.
 
-### Win Condition
-Solve all 5 puzzles and reach the exit. Your completion time determines your rank.
+---
 
-### Rank System
-| Time | Rank |
+## Condiție de victorie
+
+Rezolvă toate 5 puzzle-urile și ajunge în camera cu trofeu. Timpul de completare determină rank-ul final.
+
+| Timp | Rank |
 |------|------|
 | < 3 min | ELITE HACKER |
 | < 5 min | SKILLED ANALYST |
@@ -26,205 +28,150 @@ Solve all 5 puzzles and reach the exit. Your completion time determines your ran
 
 ---
 
-## The 5 Rooms
+## Cele 5 Camere
 
-### Room 1 — Caesar Cipher
-- **Concept:** A message encrypted with Caesar cipher appears on the terminal
-- **Challenge:** Player decrypts the message using the given shift value
-- **Example:** `RSHQ SRUW 443` with shift 3 → `OPEN PORT 443`
-- **Cybersecurity relevance:** Classical cryptography, encryption basics
+### Camera 1 — Caesar Cipher (podea de lavă)
+- **Concept:** Un mesaj criptat cu cifrul Caesar apare pe terminal
+- **Provocare:** Jucătorul decriptează mesajul folosind valoarea shift-ului (3)
+- **Exemplu:** `RSHQ SRUW 443` cu shift 3 → `OPEN PORT 443`
+- **Relevanță:** Criptografie clasică, bazele cifrării
+- **Pericol:** Podeaua este lavă — cazi = pierzi o încercare, reapari la intrare
 
-### Room 2 — Vigenere Cipher
-- **Concept:** A message encrypted with Vigenere cipher using a keyword
-- **Challenge:** Player uses the key to decrypt the message
-- **Example:** `HKVIYCNN` with key `CYBER` → `FIREWALL`
-- **Cybersecurity relevance:** Polyalphabetic cipher, key-based encryption
+### Camera 2 — Vigenere Cipher
+- **Concept:** Mesaj criptat cu cifrul Vigenere folosind un cuvânt-cheie
+- **Provocare:** Jucătorul folosește cheia pentru a decripta mesajul
+- **Exemplu:** `HKVIYCNN` cu cheie `CYBER` → `FIREWALL`
+- **Relevanță:** Cifru polialfabetic, criptare bazată pe cheie
 
-### Room 3 — Binary Decode
-- **Concept:** A binary-encoded cybersecurity command appears on screen
-- **Challenge:** Player converts binary → ASCII text to reveal the command
-- **Example:** `01000001 01001100 01001100 01001111 01010111 ...` → `ALLOW PORT 22`
-- **Cybersecurity relevance:** Data encoding, binary representation, ASCII
+### Camera 3 — Binary Decode
+- **Concept:** Un comandă codificată în binar apare pe ecran
+- **Provocare:** Jucătorul convertește binar → ASCII pentru a găsi comanda
+- **Exemplu:** `01000001 01001100 01001100 01001111 01010111` → `ALLOW`
+- **Relevanță:** Codificare binară, reprezentare ASCII
 
-### Room 4 — Hash Matching (Password Cracking)
-- **Concept:** An MD5 hash is shown with multiple password options
-- **Challenge:** Player identifies which password matches the hash
-- **Example:** Hash `5f4dcc3b5aa765d61d8327deb882cf99` → `password`
-- **Cybersecurity relevance:** Password hashing, dictionary attacks, hash lookup
+### Camera 4 — Hash Matching
+- **Concept:** Un hash MD5 este afișat cu mai multe parole posibile
+- **Provocare:** Jucătorul identifică parola care corespunde hash-ului
+- **Exemplu:** Hash `5f4dcc3b5aa765d61d8327deb882cf99` → `password`
+- **Relevanță:** Hashing parole, atacuri dicționar, lookup hash
 
-### Room 5 — Cybersecurity Definitions
-- **Concept:** Fill-in-the-blank definitions of cybersecurity terms
-- **Challenge:** Player fills in terms like Firewall, Encryption, Phishing, Malware, Authentication
-- **Example:** `"A ______ is a network security system that monitors and controls incoming and outgoing network traffic..."` → `Firewall`
-- **Cybersecurity relevance:** Foundational cybersecurity knowledge
+### Camera 5 — Cybersecurity Definitions
+- **Concept:** Completare de spații libere cu termeni de securitate cibernetică
+- **Provocare:** Jucătorul completează definiții cu termeni: Firewall, Encryption, Phishing, Malware, Authentication
+- **Relevanță:** Cunoștințe fundamentale de securitate cibernetică
 
 ---
 
-## Project Structure
+## Camera Finală — Sala Trofeului
+
+- Jucătorul este întâmpinat cu efect de confetti (asset Lana Studio)
+- Trofeu 3D (`WinnerCup.fbx`) colorat în auriu, plasat pe podium
+- Ecran de final cu timp de completare și rank
+
+---
+
+## Sistem Audio
+
+- **Muzică de fundal:** buclă continuă, repornește la retry
+- **Sunet deschidere/închidere uși:** redat la fiecare interacțiune cu ușa
+- **Sunet "YOU LOST":** redat imediat la 0 încercări rămase, înainte de freeze
+- **Sunet lavă:** sizzle + scream la căderea în lavă
+- **Sunet nivel deblocat:** la rezolvarea fiecărui puzzle
+- Volumul muzicii și SFX-ului se controlează din meniul principal (Settings)
+
+---
+
+## Structura Proiectului
 
 ```
 Assets/
 ├── Scenes/
-│   ├── MainMenu          # Main menu scene
-│   └── GameScene          # The tunnel with all 5 rooms
+│   ├── MainMenu.unity          # Meniu principal
+│   └── GameScene.unity         # Tunelul cu toate 5 camerele
 ├── Scripts/
 │   ├── Core/
-│   │   ├── GameManager.cs       # Game state, room progression, timer
-│   │   ├── SceneLoader.cs       # Scene transitions with fade
-│   │   └── AudioManager.cs      # Sound effects and music
+│   │   ├── GameManager.cs          # Stare joc, progresie camere, timer
+│   │   ├── AudioManager.cs         # SFX și muzică (singleton DontDestroyOnLoad)
+│   │   ├── LavaRespawnZone.cs      # Detectare cădere în lavă + respawn
+│   │   └── ConfettiTrigger.cs      # Declanșare confetti la intrarea în sala trofeului
 │   ├── Player/
-│   │   ├── PlayerController.cs  # FPS movement (WASD + mouse)
-│   │   └── PlayerInteraction.cs # Raycast interaction system (E key)
+│   │   ├── PlayerController.cs     # Mișcare FPS (WASD + mouse)
+│   │   └── PlayerInteraction.cs    # Sistem interacțiune raycast (tasta E)
 │   ├── Puzzles/
-│   │   ├── PuzzleBase.cs        # Abstract base for all puzzles
+│   │   ├── PuzzleBase.cs           # Clasă abstractă bază pentru puzzle-uri
 │   │   ├── CaesarCipherPuzzle.cs
 │   │   ├── VigenereCipherPuzzle.cs
 │   │   ├── BinaryDecodePuzzle.cs
 │   │   ├── HashMatchingPuzzle.cs
 │   │   └── DefinitionsPuzzle.cs
 │   ├── Room/
-│   │   ├── Room.cs              # Room state and puzzle linking
-│   │   ├── Door.cs              # Animated doors (locked/unlocked)
-│   │   └── PuzzleTerminal.cs    # Interactable terminal object
-│   └── UI/
-│       ├── PuzzleUIManager.cs   # Puzzle display and input
-│       ├── HUDManager.cs        # Timer, room progress, crosshair
-│       ├── MainMenuUI.cs        # Start, settings, credits
-│       └── PauseMenuUI.cs       # Pause with ESC
-├── Prefabs/               # Reusable objects (doors, terminals, etc.)
-├── Materials/             # Cyber-themed materials
-├── Models/                # 3D models
-├── Audio/                 # Sound effects and music
-├── Animations/            # Door animations, effects
-└── UI/                    # UI sprites, fonts
+│   │   ├── Room.cs                 # Stare cameră și legătura cu puzzle-ul
+│   │   ├── Door.cs                 # Uși animate (blocate/deblocate) cu sunet
+│   │   └── PuzzleTerminal.cs       # Terminal interactiv
+│   ├── UI/
+│   │   ├── PuzzleUIManager.cs      # Afișare puzzle și input text/butoane
+│   │   ├── HUDManager.cs           # Timer, progres camere, crosshair, ecran final
+│   │   ├── MainMenuUI.cs           # Start, Settings (volum), Credits, Quit
+│   │   └── PauseMenuUI.cs          # Pauză cu ESC
+│   └── Editor/
+│       └── CyberTunnelBuilder.cs   # Editor script — generează automat toată scena
+├── Models/
+│   └── WinnerCup.fbx               # Model 3D trofeu
+├── Resources/
+│   └── Audio/                      # Fișiere audio încărcate dinamic
+├── Lana Studio/
+│   └── Hyper Casual FX/            # Asset pack confetti (Confetti_blast_multicolor etc.)
+├── Materials/                      # Materiale cyber-neon (generate de builder)
+└── Audio/                          # Fișiere audio suplimentare
 ```
 
 ---
 
-## Team Task Distribution (4 Members)
+## Controale
 
-### Member 1 — Player & Core Systems
-**Branch:** `feature/player-core`
-- [ ] Player controller (FPS movement + camera)
-- [ ] Interaction system (raycast + E key)
-- [ ] GameManager (state, progression, timer)
-- [ ] Scene transitions
-- [ ] Pause menu
-
-### Member 2 — Puzzle Logic (Cipher Rooms)
-**Branch:** `feature/puzzle-logic`
-- [ ] Caesar Cipher puzzle implementation
-- [ ] Vigenere Cipher puzzle implementation
-- [ ] Binary Decode puzzle implementation
-- [ ] Hash Matching puzzle implementation
-- [ ] Definitions puzzle implementation
-- [ ] Puzzle testing and balancing
-
-### Member 3 — Level Design & Environment
-**Branch:** `feature/level-design`
-- [ ] Tunnel corridor modeling/building
-- [ ] 5 room layouts (walls, floor, ceiling)
-- [ ] Door placement and setup
-- [ ] Terminal placement
-- [ ] Lighting (cyber/neon aesthetic)
-- [ ] Materials and textures
-- [ ] Particle effects (sparks, glow)
-
-### Member 4 — UI & Audio
-**Branch:** `feature/ui-audio`
-- [ ] Main menu (Start, Settings, Credits, Quit)
-- [ ] HUD (timer, room progress, crosshair)
-- [ ] Puzzle UI panels (text input, multiple choice, definitions)
-- [ ] Completion screen
-- [ ] Sound effects (puzzle solved, door open, typing, etc.)
-- [ ] Background music
-- [ ] Visual polish and animations
-
----
-
-## Git Workflow
-
-### Branch Strategy
-```
-main                  ← stable builds only
-├── feature/player-core
-├── feature/puzzle-logic
-├── feature/level-design
-└── feature/ui-audio
-```
-
-### Rules
-1. **Never push directly to main** — always use Pull Requests
-2. **Pull before you start working** — `git pull origin main`
-3. **Commit often with clear messages** — e.g., `added caesar cipher decryption logic`
-4. **Don't modify the same scene simultaneously** — coordinate who edits GameScene
-5. **Use prefabs** — changes to prefabs merge better than scene changes
-6. **Test before merging** — make sure the game runs before merging to main
-
----
-
-## Controls
-
-| Key | Action |
-|-----|--------|
-| WASD | Move |
-| Mouse | Look around |
-| E | Interact with terminal |
+| Tastă | Acțiune |
+|-------|---------|
+| WASD | Mișcare |
+| Mouse | Privit în jur |
+| E | Interacțiune terminal |
 | Shift | Sprint |
-| ESC | Pause menu |
+| ESC | Meniu pauză |
 
 ---
 
-## Setup Instructions
+## Generare Scenă
 
-### First Time (Creating the project)
-1. Open Unity Hub → New Project → Universal 3D (URP)
-2. In Unity: Edit → Project Settings → Editor
-   - Version Control: `Visible Meta Files`
-   - Asset Serialization: `Force Text`
-3. Commit and push to GitHub
+Scena de joc este construită **programatic** printr-un Editor Script:
 
-### Cloning (For teammates)
-1. `git clone <repo-url>`
-2. Open the folder in Unity Hub → Add project from disk
-3. Unity will regenerate `Library/` automatically
-4. Wait for import to finish, then you're ready
+`Tools → Cyber Tunnel Builder → Build GameScene`
 
----
-
-## Weekly Plan
-
-### Week 1 — Foundation
-- Create project structure ✅
-- Player movement working
-- One room with one puzzle (Caesar) working end-to-end
-- Basic UI showing
-
-### Week 2 — All Puzzles
-- All 5 puzzle scripts functional
-- Basic tunnel layout (5 rooms connected)
-- Doors working
-- HUD with timer and progress
-
-### Week 3 — Polish
-- Cyber aesthetic (neon lights, dark environment)
-- Sound effects and music
-- Main menu complete
-- Completion screen with ranks
-
-### Week 4 — Testing & Final
-- Bug fixes
-- Play testing
-- Performance optimization
-- Final presentation prep
+Scriptul `CyberTunnelBuilder.cs` generează automat:
+- Toate cele 5 camere cu pereți, podea, tavan
+- Coridoare între camere
+- Uși cu animație și script de interacțiune
+- Terminale interactive în fiecare cameră
+- Sistem de iluminat neon pe cameră
+- Elemente decorative (rack-uri servere, conducte cabluri, panouri)
+- Zona finală cu podium, trofeu 3D auriu și confetti
+- AudioManager, GameManager, HUD, PlayerController — toate configurate automat
 
 ---
 
-## Tech Notes
+## Instrucțiuni Setup
 
-- **Unity Version:** 2022.3 LTS or newer
+1. Clonează repo-ul: `git clone <url>`
+2. Deschide în Unity Hub → Add project from disk
+3. Așteaptă importul Unity
+4. Deschide `Assets/Scenes/MainMenu.unity`
+5. Apasă Play **sau** deschide `GameScene.unity` și apasă Play direct
+
+---
+
+## Cerințe Tehnice
+
+- **Unity:** 2022.3 LTS sau mai nou
 - **Render Pipeline:** Universal Render Pipeline (URP)
-- **Language:** C#
-- **Text rendering:** TextMeshPro (included with Unity)
-- **Physics:** CharacterController for player movement
-- **Interaction:** Physics.Raycast for terminal detection
+- **Limbaj:** C#
+- **Text rendering:** TextMeshPro
+- **Fizică player:** CharacterController
+- **Interacțiune:** Physics.Raycast
