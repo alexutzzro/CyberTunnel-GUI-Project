@@ -175,3 +175,37 @@ Scriptul `CyberTunnelBuilder.cs` generează automat:
 - **Text rendering:** TextMeshPro
 - **Fizică player:** CharacterController
 - **Interacțiune:** Physics.Raycast
+
+---
+
+## Galerie
+
+### 1. Meniu principal
+![Meniu principal](foto/1.png)
+
+*Meniul principal CyberTunnel, cu opțiunile de start, setări, credite și ieșire.*
+
+### 2. Intrarea în joc
+![Intrarea în joc](foto/2.png)
+
+*Alerta inițială anunță obiectivul: rezolvarea celor 5 puzzle-uri pentru evadare.*
+
+### 3. Puzzle rezolvat
+![Puzzle rezolvat](foto/3.png)
+
+*Primul acces este deblocat după rezolvarea puzzle-ului Caesar Cipher.*
+
+### 4. Cameră avansată
+![Cameră avansată](foto/4.png)
+
+*O cameră cyber-neon cu indiciu IP și terminal pregătit pentru următoarea provocare.*
+
+### 5. Ecran final
+![Ecran final](foto/5.png)
+
+*Rezultatul final afișează timpul de completare și rank-ul obținut.*
+
+### 6. Sala trofeului
+![Sala trofeului](foto/6.png)
+
+*Trofeul de final marchează evadarea reușită, cu podium colorat și confetti.*
