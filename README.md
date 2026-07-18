@@ -49,11 +49,12 @@ Rezolvă toate 5 puzzle-urile și ajunge în camera cu trofeu. Timpul de complet
 - **Exemplu:** `01000001 01001100 01001100 01001111 01010111` → `ALLOW`
 - **Relevanță:** Codificare binară, reprezentare ASCII
 
-### Camera 4 — Hash Matching
-- **Concept:** Un hash MD5 este afișat cu mai multe parole posibile
-- **Provocare:** Jucătorul identifică parola care corespunde hash-ului
-- **Exemplu:** Hash `5f4dcc3b5aa765d61d8327deb882cf99` → `password`
-- **Relevanță:** Hashing parole, atacuri dicționar, lookup hash
+### Camera 4 — IP ↔ Binary
+- **Concept:** Pe pereți apar două reprezentări ale unei adrese IPv4: format zecimal și format binar
+- **Provocare:** Jucătorul convertește IPv4 → IP binar, apoi IP binar → IPv4
+- **Exemplu IPv4 → IP binar:** `10.20.30.40` → `00001010.00010100.00011110.00101000`
+- **Exemplu IP binar → IPv4:** `10101100.00010000.11111110.00000001` → `172.16.254.1`
+- **Relevanță:** Rețele, adresare IPv4, reprezentarea binară a octeților
 
 ### Camera 5 — Cybersecurity Definitions
 - **Concept:** Completare de spații libere cu termeni de securitate cibernetică
@@ -103,6 +104,7 @@ Assets/
 │   │   ├── VigenereCipherPuzzle.cs
 │   │   ├── BinaryDecodePuzzle.cs
 │   │   ├── HashMatchingPuzzle.cs
+│   │   ├── IPBinaryPuzzle.cs
 │   │   └── DefinitionsPuzzle.cs
 │   ├── Room/
 │   │   ├── Room.cs                 # Stare cameră și legătura cu puzzle-ul
